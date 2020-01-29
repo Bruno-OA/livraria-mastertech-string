@@ -1,6 +1,7 @@
 package br.com.bruno.livraria.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name="Livro")
@@ -17,6 +18,15 @@ public class livrariaModel {
 
     @Column
     private String descricao;
+
+    @Column
+    private String genero;
+
+    @Column
+    private LocalDate datacriacao;
+
+    @Column
+    private Boolean ativo;
 
     public int getId() {
         return id;
@@ -50,5 +60,28 @@ public class livrariaModel {
         this.descricao = descricao;
     }
 
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public LocalDate getDatacriacao() {
+        return datacriacao;
+    }
+
+    public void setDatacriacao(LocalDate datacriacao) {
+        this.datacriacao = datacriacao;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
 
 }

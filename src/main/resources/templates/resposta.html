@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Cadastrado com sucesso. Veja a lista de eventos!</h1>
+
+        <div th:each="livro : ${livros}">
+            <div>
+                <p><strong>Nome:</strong> <span th:text="${livro.nome}"></span></p>
+                <p><strong>Autor:</strong> <span th:text="${livro.autor}"></span></p>
+                <p><strong>Descrição:</strong> <span th:text="${livro.descricao}"></span></p>
+                <p><strong>Genero:</strong> <span th:text="${livro.genero}"></span></p>
+                <p><strong>Data de Criação:</strong> <span th:text="${livro.datacriacao}"></span></p>
+                <p><strong>Ativo:</strong> <span th:text="${livro.ativo}"></span></p>
+                <hr>
+
+            </div>
+        </div>
+    </body>
+</html>
